@@ -1,10 +1,9 @@
 # NAME: 走代理
 # AUTHOR: 需要代理的
 # 域名规则
-DOMAIN,upvn.wenruo.nyc.mn
-DOMAIN,natla1.bytevirt.net
-DOMAIN,akileus50.wenruo.nyc.mn
-DOMAIN,duckjpiij.wenruo.nyc.mn
+DOMAIN-SUFFIX,upvn.wenruo.nyc.mn
+DOMAIN-SUFFIX,natla1.bytevirt.net
+DOMAIN-SUFFIX,akileus50.wenruo.nyc.mn
+DOMAIN-SUFFIX,duckjpiij.wenruo.nyc.mn
 # IP 规则
 IP-CIDR,146.56.100.201/32,no-resolve
-
