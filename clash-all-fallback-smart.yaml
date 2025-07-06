@@ -91,6 +91,7 @@ default: &default
     - 香港-智选
     - 香港-故转
     - 台湾-故转
+    - 台湾-智选
     - 日本-故转
     - 新加坡-故转
     - 韩国-故转
@@ -112,6 +113,8 @@ proxy-groups:
   - {name: GitHub, <<: *default}
   - {name: Reddit, <<: *default}
   - {name: Telegram, <<: *default}
+  - {name: Twitter(X), <<: *default}
+  - {name: Talkatone, <<: *default}
   - {name: WhatsApp, <<: *default}
   - {name: Facebook, <<: *default}
   - {name: YouTube, <<: *default}
@@ -145,7 +148,7 @@ proxy-groups:
   - name: 所有-智选
     type: smart
     include-all: true
-    policy-priority: "香港:1.2;sub1:0.8"
+    policy-priority: "香港:1;sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -169,7 +172,7 @@ proxy-groups:
   - name: 香港-智选
     type: smart
     include-all: true
-    policy-priority: "sub1:0.8"
+    policy-priority: "sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -191,7 +194,7 @@ proxy-groups:
   - name: 台湾-智选
     type: smart
     include-all: true
-    policy-priority: "sub1:0.8"
+    policy-priority: "sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -213,7 +216,7 @@ proxy-groups:
   - name: 日本-智选
     type: smart
     include-all: true
-    policy-priority: "sub1:0.8"
+    policy-priority: "sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -235,7 +238,7 @@ proxy-groups:
   - name: 新加坡-智选
     type: smart
     include-all: true
-    policy-priority: "sub1:0.8"
+    policy-priority: "sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -257,7 +260,7 @@ proxy-groups:
   - name: 韩国-智选
     type: smart
     include-all: true
-    policy-priority: "sub1:0.8"
+    policy-priority: "sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -279,7 +282,7 @@ proxy-groups:
   - name: 美国-智选
     type: smart
     include-all: true
-    policy-priority: "sub1:0.8"
+    policy-priority: "sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -301,7 +304,7 @@ proxy-groups:
   - name: 英国-智选
     type: smart
     include-all: true
-    policy-priority: "sub1:0.8"
+    policy-priority: "sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -323,7 +326,7 @@ proxy-groups:
   - name: 其他-智选
     type: smart
     include-all: true
-    policy-priority: "sub1:0.8"
+    policy-priority: "sub1:1.2"
     uselightgbm: true
     collectdata: true
     interval: 300
@@ -344,6 +347,7 @@ rules:
   - RULE-SET,Gemini / Domain,Gemini
   - RULE-SET,Reddit / Domain,Reddit 
   - RULE-SET,GitHub / Domain,GitHub
+  - RULE-SET,Talkatone / Domain,Talkatone
   - RULE-SET,Telegram / Domain,Telegram
   - RULE-SET,Telegram / IP,Telegram
   - RULE-SET,WhatsApp / Domain,WhatsApp
@@ -403,6 +407,7 @@ rule-providers:
   Telegram / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs"}  
   Telegram / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs"}
   Twitter / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/x.mrs"}
+  Talkatone / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/mottzz87/crules/main/rule/talkatone.list"}
   WhatsApp / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Whatsapp/Whatsapp.list"}
   Facebook / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs"}
   Amazon / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs"}
